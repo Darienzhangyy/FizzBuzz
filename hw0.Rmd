@@ -12,7 +12,7 @@ and your writeup matter for your overall grade.
 -->
 
 ```{r}
-fizzbuzz = function(n)
+FizzBuzz = function(n) 
 {
   out = seq(n)
   out[(seq(n) %% 3)==0] = 'Fizz'
