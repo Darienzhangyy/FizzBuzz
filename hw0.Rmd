@@ -1,5 +1,6 @@
 Homework 0 -Eclectical Eagle Scouts
-<!
+
+###Implementation
 Use this section to implement the fizzbuzz function.
 ```{r,echo=T}
 FizzBuzz = function(n)
@@ -10,6 +11,11 @@ FizzBuzz = function(n)
   out[(seq(n) %% 15)==0] = 'FizzBuzz'
   return(out)
 }
+
+
+#Define a function called FizzBuzz 
+#Define input as a sequence of n called out
+#Use subset [] and logical statement 
 ```
 
 
