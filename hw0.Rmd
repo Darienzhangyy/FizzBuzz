@@ -1,6 +1,5 @@
 Homework 0 -Eclectical Eagle Scouts
-
-<!--
+<!
 Use this section to implement the fizzbuzz function.
 ```{r,echo=T}
 FizzBuzz = function(n)
@@ -16,8 +15,7 @@ FizzBuzz = function(n)
 
 
 ### Output
-
-<!--
+<!
 Use this section to show the output of your 
 fizzbuzz function for integer values from 1 to 100.
 
