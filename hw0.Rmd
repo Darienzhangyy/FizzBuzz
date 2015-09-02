@@ -1,16 +1,4 @@
-Homework 0 -Eclectical Eagle Scouts```{r}
-FizzBuzz = function(n)
-{
-  out = seq(n)
-  out[(seq(n) %% 3)==0] = 'Fizz'
-  out[(seq(n) %% 5)==0] = 'Buzz'
-  out[(seq(n) %% 15)==0] = 'FizzBuzz'
-  return(out)
-}
-```
-========================================================
-
-### Implementation
+Homework 0 -Eclectical Eagle Scouts
 
 <!--
 Use this section to implement the fizzbuzz function.
@@ -24,15 +12,7 @@ FizzBuzz = function(n)
   return(out)
 }
 ```
-## Define a function called FizzBuzz 
-##Set input n as a sequence using sequence()
-##Using []to subset out using a logical statement
 
-
-This should include a short write up describing your appraoch
-to implementing the function. Not both code formating / style
-and your writeup matter for your overall grade.
--->
 
 
 ### Output
