@@ -1,0 +1,19 @@
+---
+title: "STA523_HW0"
+output: pdf_document
+---
+
+```{r}
+
+FBfunc <- function(data){
+  y=data
+for (i in 1:length(data)){
+  if (data[i] %% 3 == 0 & data[i] %% 5 == 0) y[i]="FizzBuzz" else if (data[i] %% 3 == 0) y[i]="Fizz" else if (data[i] %% 5 == 0) y[i]="Buzz" else y[i]=data[i] 
+return(y)
+}
+}
+FBfunc <- Vectorize(FBfunc)
+x=c(1:100)
+FBfunc(x)
+
+```
