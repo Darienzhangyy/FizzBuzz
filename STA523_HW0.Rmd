@@ -14,6 +14,6 @@ return(y)
 }
 FBfunc <- Vectorize(FBfunc)
 x=c(1:100)
-FBfunc(x)
+cat(FBfunc(x),sep="\n")
 
 ```
