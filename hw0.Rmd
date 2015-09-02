@@ -1,7 +1,9 @@
-Homework 0 -Eclectical Eagle Scouts
+Homework 0: Eclectical Eagle Scouts
 
-###Implementation
-Use this section to implement the fizzbuzz function.
+### Implementation
+
+This function takes as input an integer, n, returning a sequence from 1 to n in which multiples of 3 are replaced with 'Fizz', multiples of 5 by 'Buzz', and multiples of 15 by 'FizzBuzz'. Internally, a sequence of integers from 1 to n is assigned to a vector, out. Multiples of 3, 5, and 15 are replaced with text by subsetting with logical vectors, in the process converting out to a character vector. Finally, the vector is concatenated and printed, one element per line.
+
 ```{r,echo=T}
 FizzBuzz = function(n)
 {
@@ -9,24 +11,13 @@ FizzBuzz = function(n)
   out[(seq(n) %% 3)==0] = 'Fizz'
   out[(seq(n) %% 5)==0] = 'Buzz'
   out[(seq(n) %% 15)==0] = 'FizzBuzz'
-  return(out)
-}
-
-
-#Define a function called FizzBuzz 
-#Define input as a sequence of n called out
-#Use subset [] and logical statement 
+  cat(out, sep='\n')
+} 
 ```
 
 
 
 ### Output
-<!
-Use this section to show the output of your 
-fizzbuzz function for integer values from 1 to 100.
-
-No writeup is necessary for this section.
--->
 
 ```{r}
 FizzBuzz(100)
