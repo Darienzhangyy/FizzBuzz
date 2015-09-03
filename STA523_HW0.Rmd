@@ -8,12 +8,20 @@ output: pdf_document
 FBfunc <- function(data){
   y=data
 for (i in 1:length(data)){
-  if (data[i] %% 3 == 0 & data[i] %% 5 == 0) y[i]="FizzBuzz" else if (data[i] %% 3 == 0) y[i]="Fizz" else if (data[i] %% 5 == 0) y[i]="Buzz" else y[i]=data[i] 
+  if (is.numeric(data[i])==FALSE) y[i]="Not numeric"
+  else if (is.double(data[i])==TRUE) y[i]="Not integer"
+  else if (data[i] %% 3 == 0 & data[i] %% 5 == 0) y[i]="FizzBuzz" 
+  else if (data[i] %% 3 == 0) y[i]="Fizz" else if (data[i] %% 5 == 0) y[i]="Buzz" 
+  else y[i]=data[i] 
 return(y)
 }
 }
 FBfunc <- Vectorize(FBfunc)
-x=c(1:100)
-cat(FBfunc(x),sep="\n")
+x1=c(1:100)
+cat(FBfunc(x1),sep="\n")
+x2=c(6.7,99.4)
+cat(FBfunc(x2),sep="\n")
+x3=c('a','b')
+cat(FBfunc(x3),sep="\n")
 
 ```
