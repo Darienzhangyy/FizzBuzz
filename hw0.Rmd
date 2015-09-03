@@ -9,7 +9,7 @@ This function takes as input an integer, n, returning a sequence from 1 to n in 
 
 ```{r,echo=T}
 FizzBuzz = function(n){
-        if (is.integer(n)==FALSE){
+        if (is.integer(n)==FALSE){          # This is designed to give sane response to invalid input#
                 print("Please enter an integer")
         }
 else{
