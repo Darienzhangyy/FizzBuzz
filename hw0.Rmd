@@ -11,9 +11,9 @@ This function takes as input a list or non-logical vector that can be flattened,
 FizzBuzz = function(n) {
   if(!anyNA(suppressWarnings(as.numeric(unlist(n)))) & !any(is.logical(n))) {
     out = n = abs(round(as.numeric(unlist(n))))
-    out[n %% 3)==0] = 'Fizz'
-    out[n %% 5)==0] = 'Buzz'
-    out[n %% 15)==0] = 'FizzBuzz'
+    out[(n %% 3)==0] = 'Fizz'
+    out[(n %% 5)==0] = 'Buzz'
+    out[(n %% 15)==0] = 'FizzBuzz'
     out[n==0] = 0
     cat(out, sep='\n')
   } else {
