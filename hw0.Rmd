@@ -1,24 +1,24 @@
 ---
 output: pdf_document
 ---
-Homework 0: Eclectical Eagle Scouts
+Homework 0: Eclectic Eagle Scouts
 
 ### Implementation
 
-This function takes as input an integer, n, returning a sequence from 1 to n in which multiples of 3 are replaced with 'Fizz', multiples of 5 by 'Buzz', and multiples of 15 by 'FizzBuzz'. Internally, a sequence of integers from 1 to n is assigned to a vector, out. Multiples of 3, 5, and 15 are replaced with text by subsetting with logical vectors, in the process converting out to a character vector. Finally, the vector is concatenated and printed, one element per line.
+This function takes as input a list or non-logical vector that can be flattened, coerced, or rounded into an integer vector of absolute values. Upon execution, it prints this vector of positive integers, with multiples of 3 replaced with 'Fizz', multiples of 5 by 'Buzz', and multiples of 15 by 'FizzBuzz'. Internally, the vector of positive integers is assigned to a vector, out. Multiples of 3, 5, and 15 are replaced with text via modulus-based logical-vector subsetting, in the process coercing out to a character vector. Finally, the vector is concatenated and printed, one element per line. If, however, the input is logical or cannot be coerced to a numeric, an error is thrown.
 
-```{r,echo=T}
-FizzBuzz = function(n){
-        if (is.integer(n)==FALSE){          # This is designed to give sane response to invalid input#
-                print("Please enter an integer")
-        }
-else{
-  out = seq(n)
-  out[(seq(n) %% 3)==0] = 'Fizz'
-  out[(seq(n) %% 5)==0] = 'Buzz'
-  out[(seq(n) %% 15)==0] = 'FizzBuzz'
-  cat(out, sep='\n')
-} 
+```{r, echo=T}
+FizzBuzz = function(n) {
+  if(!anyNA(suppressWarnings(as.numeric(unlist(n)))) & !any(is.logical(n))) {
+    out = n = abs(round(as.numeric(unlist(n))))
+    out[n %% 3)==0] = 'Fizz'
+    out[n %% 5)==0] = 'Buzz'
+    out[n %% 15)==0] = 'FizzBuzz'
+    out[n==0] = 0
+    cat(out, sep='\n')
+  } else {
+    warning('Input cannot be coerced or rounded to positive integers.')
+  }  
 }
 ```
 
@@ -28,7 +28,6 @@ else{
 
 ```{r}
 FizzBuzz(1:100)
-FizzBuzz('a')
-FizzBuzz(5.6)
-
+FizzBuzz('asdf')
+FizzBuzz(list(5.6, '6.7', -7.8, 9:10))
 ```
